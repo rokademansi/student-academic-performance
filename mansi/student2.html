@@ -1,0 +1,94 @@
+<html>
+<head>
+<script language=javascript>
+function valid1()
+{
+var x;
+x=event.keyCode;
+if(x>=48 && x<=57)
+{
+event.keyCode=x;
+return true;
+}
+else
+{
+event.keyCode=0;
+return false;
+}
+}
+function valid2()
+{
+var x;
+x=event.keyCode;
+if((x>=65 && x<=90)||(x>=97 && x<=122)||x==32)
+{
+event.keyCode=x;
+return true;
+}
+else
+{
+event.keyCode=0;
+return false;
+}
+}
+
+</script>
+</head>
+<body>
+<form name = frm method = post action=student2.php>
+<center>
+<table>
+<caption><h3>Student Information</h3></caption>
+<tr>
+<td> PRN no </td>
+<td> <input type = text name = prnno placeholder="PRN No" onkeypress="return valid1()"><br></td>
+</tr>
+<tr>
+<td> Enroll no </td>
+<td> <input type = text name = enrlno placeholder="Enroll no" onkeypress="return valid1()"><br></td>
+</tr>
+<tr>
+<td> Class name </td>
+<td> <input type = text name = classnm placeholder="Class name"><br></td>
+</tr>
+<tr>
+<td> Division </td>
+<td> <input type = text name = div placeholder="Division"></td>
+</tr>
+<tr>
+<td> Faculty </td>
+<td> <input type = text name = fac placeholder="Faculty"><br></td>
+</tr>
+<tr>
+<td> Student Name </td>
+<td> <input type = text name = studnm placeholder="Student Name" onkeypress="return valid2()"><br></td>
+</tr>
+<tr>
+<td> Gender </td>
+<td> <input type = text name = gen placeholder="Gender" onkeypress="return valid2()"><br></td>
+</tr>
+<tr>
+<td> Caste </td>
+<td> <input type = text name = cst placeholder="Caste"></td>
+</tr>
+<tr>
+<td> Contact no </td>
+<td> <input type = text name = cntno placeholder="Contact no"><br></td>
+</tr>
+<tr>
+<td> Email id </td>
+<td> <input type = text name = eid placeholder="Email id"></td>
+</tr>
+<tr>
+<td> Password </td>
+<td> <input type = text name = psw placeholder="Password"></td>
+</tr>
+</table>
+<input type = submit name = sbm value = submit>
+<input type = submit name = sbm value = update>
+<input type = submit name = sbm value = delete>
+<input type = submit name = sbm value = display>
+<input type = submit name = sbm value = search>
+</form>
+</body>
+</html>

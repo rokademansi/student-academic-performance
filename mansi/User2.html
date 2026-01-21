@@ -1,0 +1,70 @@
+<html>
+<head>
+<script language=javascript>
+function valid1()
+{
+var x;
+x=event.keyCode;
+if(x>=48 && x<=57)
+{
+event.keyCode=x;
+return true;
+}
+else
+{
+event.keyCode=0;
+return false;
+}
+}
+function valid2()
+{
+var x;
+x=event.keyCode;
+if((x>=65 && x<=90)||(x>=97 && x<=122)||x==32)
+{
+event.keyCode=x;
+return true;
+}
+else
+{
+event.keyCode=0;
+return false;
+}
+}
+
+</script>
+</head>
+<body>
+<form name = frm method=post action=User2.php>
+<center>
+<table>
+<caption><h3>User</h3></caption>
+<tr>
+<td> User id </td>
+<td> <input type = text name=uid placeholder="User id" onkeypress="return valid1()"><br></td>
+</tr>
+<tr>
+<td> User Name </td>
+<td> <input type = text name=unm placeholder="User Name" onkeypress="return valid2()"><br></td>
+</tr>
+<tr>
+<td> Contact no. </td>
+<td> <input type = text name=cnt placeholder="Contact no"><br></td>
+</tr>
+<tr>
+<td> Password </td>
+<td> <input type = text name=psw placeholder="Password"><br></td>
+</tr>
+<tr>
+<td> E-mail id </td>
+<td> <input type = text name=eml placeholder="E-mail id"></td>
+</tr>
+</table>
+<input type = submit name = sbm value = submit>
+<input type = submit name = sbm value = update>
+<input type = submit name = sbm value = delete>
+<input type = submit name = sbm value = display>
+<input type = submit name = sbm value = search>
+</form>
+</body>
+</html>
